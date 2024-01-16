@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content>
     <meta name="author" content="Epilog Theme">
-    <title>MightShop - Multipurpose eCommerce HTML Template</title>
+    <title>Shutter Stock Search</title>
 
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
@@ -27,7 +27,6 @@
             </div>
         </div>
     </div>
-
 
     <header class="header-area">
         <div class="main-navbar">
@@ -56,11 +55,12 @@
                 <h3>Recent Listing Product</h3>
             </div>
             <div class="row">
+                @foreach($images as $image)
                 <div class="col-sm-6 col-md-6 col-lg-3">
                     <div class="product-item">
                         <div class="product-image">
                             <div class="ribbon">5% Off</div>
-                            <img class="img-fluid" src="assets/images/products/navel_orange.png" alt="Product 1">
+                            <img class="img-fluid" src="{{ $image['url'] }}" alt="{{ $image['description'] }}" alt="Product 1">
                         </div>
                         <div class="product-info">
                             <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Navel
@@ -80,176 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">New</div>
-                            <img class="img-fluid" src="assets/images/products/red_tomato.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Red
-                                    Tomato</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$15.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$11.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">3% Off</div>
-                            <img class="img-fluid" src="assets/images/products/sunflower_oli.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Sunflower
-                                    Oli</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$15.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$13.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">New</div>
-                            <img class="img-fluid" src="assets/images/products/cookies_biscute.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Cookies
-                                    Biscute</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$32.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$25.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">Sale</div>
-                            <img class="img-fluid" src="assets/images/products/mackerel_fish.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Mackerel
-                                    Fish</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$32.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$25.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">20% Off</div>
-                            <img class="img-fluid" src="assets/images/products/beverage_item.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Beverage
-                                    Item</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$32.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$25.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">New</div>
-                            <img class="img-fluid" src="assets/images/products/castrated_meat.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Castrated
-                                    Meat</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$32.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$25.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">20% Off</div>
-                            <img class="img-fluid" src="assets/images/products/basmati_rice.png" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Basmati
-                                    Rice</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$32.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$25.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
