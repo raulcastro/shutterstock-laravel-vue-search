@@ -23,9 +23,13 @@
             right: 0;
             text-align: center;
             margin: 0 auto;
-            top: 0!important;
+            top: 0 !important;
             width: auto;
 
+        }
+
+        .product-name {
+            font-size: 14px!important;
         }
     </style>
 </head>
@@ -67,24 +71,20 @@
                 <h3>Recent Listing Product</h3>
             </div>
             <div class="row">
-                @foreach ($images as $image)
+                @foreach ($images as $key => $image)
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="product-item">
                             <div class="product-image" style="">
-                                <img class="img-fluid " src="{{ $image['url'] }}" alt="{{ $image['description'] }}"
-                                    alt="Product 1" style="">
+                                <img class="img-fluid" src="{{ $image['url'] }}" alt="{{ $image['description'] }}"
+                                    alt="Product {{ $key + 1 }}">
                             </div>
                             <div class="product-info">
-                                <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Navel
-                                        Orange</a></h4>
-                                <div class="row">
-                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                        <div class="discount-price">$12.00</div>
-                                    </div>
-                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                        <div class="sale-price">$10.60</div>
-                                    </div>
-                                </div>
+                                <h4 class="product-name">
+                                    <a href="#" data-toggle="modal"  data-toggle="modal" data-target="#imageModal"
+                                    data-image-src="{{ $image['url'] }}" data-image-alt="{{ $image['description'] }}"
+                                        data-target="#imageModal">{{ $image['description'] }}</a>
+                                </h4>
+
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,25 @@
 
     <div class="top-bottom-scroll"><i class="bx bx-chevrons-up bx-fade-up"></i></div>
 
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Single Modal for Images -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <img class="img-fluid" id="modalImage" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -188,6 +206,23 @@
     <script src="assets/js/velocity.ui.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/main.js%3Fv=1.0.0"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="modal"]').on('click', function() {
+                var imageSrc = $(this).data('image-src');
+                var imageAlt = $(this).data('image-alt');
+
+                console.log(imageAlt);
+
+                $('#imageModal .modal-title').text(imageAlt);
+                $('#imageModal #modalImage').attr('src', imageSrc);
+                $('#imageModal #modalImage').attr('alt', imageAlt);
+
+                $('#imageModal').modal('show');
+            });
+        });
+    </script>
 </body>
 
 </html>

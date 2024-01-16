@@ -19,7 +19,7 @@ class ShutterstockController extends Controller
             // Realiza la solicitud a la API de Shutterstock
             $response = Http::withBasicAuth($clientId, $clientSecret)->get($endpoint, [
                 'query' => 'beach girl', // Término de búsqueda para imágenes de piratas
-                'per_page' => 10, // Número de imágenes a obtener (en este caso, 10)
+                'per_page' => 12, // Número de imágenes a obtener (en este caso, 10)
             ]);
 
             // Verifica si la solicitud fue exitosa (código de estado 200)
