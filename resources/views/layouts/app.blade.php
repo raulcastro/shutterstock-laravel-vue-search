@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     @include('layouts.preloader')
 
     @include('layouts.header')

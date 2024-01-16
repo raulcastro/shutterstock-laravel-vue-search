@@ -23,6 +23,7 @@ class ShutterstockController extends Controller
             $response = Http::withBasicAuth($clientId, $clientSecret)->get($endpoint, [
                 'query' => $searchQuery,
                 'per_page' => 12,
+                'image_type' => 'vector'
             ]);
 
             // Verifica si la solicitud fue exitosa (código de estado 200)
