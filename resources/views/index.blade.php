@@ -16,6 +16,18 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css%3Fv=1.0.1.css">
     <link rel="stylesheet" href="assets/css/responsive.css%3Fv=1.0.1.css">
+
+    <style>
+        .product-item .product-image img {
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 0 auto;
+            top: 0!important;
+            width: auto;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -55,31 +67,27 @@
                 <h3>Recent Listing Product</h3>
             </div>
             <div class="row">
-                @foreach($images as $image)
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image">
-                            <div class="ribbon">5% Off</div>
-                            <img class="img-fluid" src="{{ $image['url'] }}" alt="{{ $image['description'] }}" alt="Product 1">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Navel
-                                    Orange</a></h4>
-                            <div class="row">
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="discount-price">$12.00</div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="sale-price">$10.60</div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="add-to-cart"><a href="index.html#"><i class="bx bx-cart-alt"></i></a>
+                @foreach ($images as $image)
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="product-item">
+                            <div class="product-image" style="">
+                                <img class="img-fluid " src="{{ $image['url'] }}" alt="{{ $image['description'] }}"
+                                    alt="Product 1" style="">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name"><a href="index.html#costumModal19" data-toggle="modal">Navel
+                                        Orange</a></h4>
+                                <div class="row">
+                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                        <div class="discount-price">$12.00</div>
+                                    </div>
+                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                        <div class="sale-price">$10.60</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
