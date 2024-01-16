@@ -29,7 +29,7 @@
     // Preloader
     jQuery(window).on('load',function(){
         //jQuery(".preloader").fadeOut(1000);
-        $(".preloader").delay(1600).fadeOut("slow");
+        $(".preloader").delay(100).fadeOut("slow");
     });
 
     // Offer Event CountDown

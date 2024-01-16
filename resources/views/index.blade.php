@@ -18,14 +18,23 @@
     <link rel="stylesheet" href="assets/css/responsive.css%3Fv=1.0.1.css">
 
     <style>
-        .product-item .product-image img {
+        .product-item .product-image {
             left: 0;
             right: 0;
             text-align: center;
             margin: 0 auto;
             top: 0 !important;
             width: auto;
+            overflow: hidden;
+        }
 
+        .product-item .product-image img{
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 0 auto;
+            top: 0 !important;
+            width: auto;
         }
 
         .product-name {
@@ -49,14 +58,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-5 order-xs-1 col-sm-3 col-md-3 col-lg-3">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img class="img-fluid" src="assets/images/Logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="col-sm-5 order-xs-2 col-md-6 col-lg-6">
-                        <form class="searchbox">
-                            <input type="search" placeholder="Search Products ...." name="search"
-                                class="searchbox-input" required>
+                        <form action="{{ route('searchImages') }}" method="GET" class="searchbox">
+                            <input type="search" placeholder="Search Products ...." name="search" class="searchbox-input" required value="{{ isset($searchQuery) ? $searchQuery : '' }}">
                             <button class="searchbox-submit" type="submit"><i class="bx bx-search-alt"></i></button>
                         </form>
                     </div>
@@ -205,7 +213,7 @@
     <script src="assets/js/velocity.min.js"></script>
     <script src="assets/js/velocity.ui.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/main.js%3Fv=1.0.0"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
         $(document).ready(function() {
