@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<div id="app">
+<div >
     Vue 3 + Vite + Laravel 10
     <hello-world></hello-world>
 </div>

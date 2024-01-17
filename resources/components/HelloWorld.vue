@@ -1,19 +1,11 @@
 <template>
     <div>
-      <h1>{{ message }}</h1>
+        Hello World
     </div>
-  </template>
+</template>
 
-  <script>
-  export default {
-    data() {
-      return {
-        message: 'Hello from HelloWorld componentssss!',
-      };
-    },
-  };
-  </script>
-
-  <style scoped>
-  /* Aquí puedes agregar estilos específicos para este componente si es necesario */
-  </style>
+<script>
+    export default {
+        name: 'HelloWorld'
+    }
+</script>

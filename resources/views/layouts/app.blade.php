@@ -15,7 +15,7 @@
     @include('partials.styles')
 </head>
 
-<body>
+<body id="app">
     @include('layouts.preloader')
 
     @include('layouts.header')
