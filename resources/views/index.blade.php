@@ -28,6 +28,12 @@
         </div>
     </div>
 </section>
+
+<div id="app">
+    Vue 3 + Vite + Laravel 10
+    <hello-world></hello-world>
+</div>
+
 <!-- Single Modal for Images -->
 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 aria-hidden="true">

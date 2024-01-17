@@ -10,6 +10,10 @@
 
 composer require guzzlehttp/guzzle
 
+npm install vue -–save-dev
+
+npm install @vitejs/plugin-vue
+
 
 ## About Laravel
 
