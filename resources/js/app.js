@@ -1,6 +1,7 @@
 import './bootstrap';
 import { createApp } from 'vue';
 import HelloWorld from '../components/HelloWorld.vue';
+import ImageList from '../components/ImageList.vue';
 
 window.app = createApp({
     setup() {
@@ -9,6 +10,7 @@ window.app = createApp({
         };
     },
     components: {
-        HelloWorld
+        HelloWorld,
+        'image-list': ImageList,
     },
 }).mount('#app');

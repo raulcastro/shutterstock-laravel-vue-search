@@ -1,30 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
 <section class="product-listing">
     <div class="container">
         <div class="section-title">
             <h3>Recent Listing Product</h3>
         </div>
         <div class="row">
-            @foreach ($images as $key => $image)
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="product-item">
-                        <div class="product-image" style="">
-                            <img class="img-fluid" src="{{ $image['url'] }}" alt="{{ $image['description'] }}"
-                                alt="Product {{ $key + 1 }}">
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-name">
-                                <a href="#" data-toggle="modal"  data-toggle="modal" data-target="#imageModal"
-                                data-image-src="{{ $image['url'] }}" data-image-alt="{{ $image['description'] }}"
-                                    data-target="#imageModal">{{ $image['description'] }}</a>
-                            </h4>
-
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+            <image-list :images="{{ json_encode($images) }}"></image-list>
         </div>
     </div>
 </section>

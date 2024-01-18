@@ -16,14 +16,14 @@ class ShutterstockController extends Controller
         $endpoint = 'https://api.shutterstock.com/v2/images/search?';
 
         // Obtén el término de búsqueda desde la solicitud
-        $searchQuery = $request->input('search', 'beach girl');
+        $searchQuery = $request->input('search', 'girl');
 
         try {
             // Realiza la solicitud a la API de Shutterstock con el término de búsqueda proporcionado
             $response = Http::withBasicAuth($clientId, $clientSecret)->get($endpoint, [
                 'query' => $searchQuery,
                 'per_page' => 12,
-                'image_type' => 'vector'
+                'image_type' => 'photo'
             ]);
 
             // Verifica si la solicitud fue exitosa (código de estado 200)
