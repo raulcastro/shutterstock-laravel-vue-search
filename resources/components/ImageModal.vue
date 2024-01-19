@@ -1,5 +1,7 @@
 <template>
-<div class="modal fade" v-show="show" @click="close">
+<div class="modal fade" :class="{ 'show': show }" :style="{ 'display': show ? 'block' : 'none' }" @click="close">
+
+
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
