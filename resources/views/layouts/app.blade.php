@@ -15,17 +15,19 @@
     @include('partials.styles')
 </head>
 
-<body id="app">
-    @include('layouts.preloader')
+<body>
+    <div id="app">
+        @include('layouts.preloader')
 
-    @include('layouts.header')
+        @include('layouts.header')
 
-    @yield('content')
+        @yield('content')
 
-    @include('layouts.footer')
+        @include('layouts.footer')
 
-    <div class="top-bottom-scroll">
-        <i class="bx bx-chevrons-up bx-fade-up"></i>
+        <div class="top-bottom-scroll">
+            <i class="bx bx-chevrons-up bx-fade-up"></i>
+        </div>
     </div>
 
     @include('partials.scripts')

@@ -10,17 +10,6 @@
 
 <script>
     $(document).ready(function() {
-        $('[data-toggle="modal"]').on('click', function() {
-            var imageSrc = $(this).data('image-src');
-            var imageAlt = $(this).data('image-alt');
 
-            console.log(imageAlt);
-
-            $('#imageModal .modal-title').text(imageAlt);
-            $('#imageModal #modalImage').attr('src', imageSrc);
-            $('#imageModal #modalImage').attr('alt', imageAlt);
-
-            $('#imageModal').modal('show');
-        });
     });
 </script>
