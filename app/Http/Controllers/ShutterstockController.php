@@ -16,7 +16,7 @@ class ShutterstockController extends Controller
         $endpoint = 'https://api.shutterstock.com/v2/images/search?';
 
         // Obtén el término de búsqueda desde la solicitud
-        $searchQuery = $request->input('search', 'girl');
+        $searchQuery = $request->input('search');
 
         try {
             // Realiza la solicitud a la API de Shutterstock con el término de búsqueda proporcionado
@@ -42,11 +42,10 @@ class ShutterstockController extends Controller
                     ];
                 }
 
-                // Pasa el arreglo de imágenes a la vista 'index'
-                return view('index', ['images' => $searchResult, 'searchQuery' => $searchQuery]);
+                return response()->json(['images' => $searchResult, 'searchQuery' => $searchQuery]);
             } else {
                 // Maneja el caso en el que la solicitud no fue exitosa
-                return view('error', ['message' => 'Error al obtener imágenes de Shutterstock']);
+                return response()->json(['error' => 'Error al obtener imágenes de Shutterstock'], 500);
             }
         } catch (\Exception $e) {
             // Maneja cualquier excepción que pueda ocurrir durante la solicitud

@@ -8,10 +8,7 @@
                     </a>
                 </div>
                 <div class="col-sm-5 order-xs-2 col-md-6 col-lg-6">
-                    <form action="{{ route('searchImages') }}" method="GET" class="searchbox">
-                        <input type="search" placeholder="Search Products ...." name="search" class="searchbox-input" required value="{{ isset($searchQuery) ? $searchQuery : '' }}">
-                        <button class="searchbox-submit" type="submit"><i class="bx bx-search-alt"></i></button>
-                    </form>
+                    <search-form></search-form>
                 </div>
             </div>
         </div>

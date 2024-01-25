@@ -1,5 +1,6 @@
 import './bootstrap';
 import { createApp } from 'vue';
+import SearchForm from '../components/SearchForm.vue';
 import ImageList from '../components/ImageList.vue';
 import ImageModal from '../components/ImageModal.vue';
 
@@ -27,6 +28,7 @@ window.app = createApp({
         }
     },
     components: {
+        'search-form': SearchForm,
         'image-list': ImageList,
         'image-modal': ImageModal,
     },

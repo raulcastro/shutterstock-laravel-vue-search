@@ -7,8 +7,11 @@
                 <h3>Recent Listing Product</h3>
             </div>
             <div class="row">
-                <image-list :images="{{ json_encode($images) }}" @@show-modal="openModal"></image-list>
-
+                @isset($images)
+                    <image-list :images="{{ json_encode($images) }}" @@show-modal="openModal"></image-list>
+                @else
+                    <image-list :images="[]" @@show-modal="openModal"></image-list>
+                @endisset
             </div>
         </div>
     </section>

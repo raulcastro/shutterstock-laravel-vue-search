@@ -18,9 +18,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-Route::get('/', [ShutterstockController::class, 'showPirateImages']);
-
-// Agrega una nueva ruta para manejar la búsqueda
 Route::get('/search', [ShutterstockController::class, 'showPirateImages'])->name('searchImages');
+
 
